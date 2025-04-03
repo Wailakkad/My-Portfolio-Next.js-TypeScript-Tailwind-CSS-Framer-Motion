@@ -2,10 +2,9 @@
 import { useEffect } from "react"
 import { useMotionValue, animate, useMotionTemplate, motion } from "framer-motion"
 import Image from "next/image"
-import Link from "next/link"
 import image from "@/public/profilepic.png"
 import obj from "@/public/3d-modeling.png"
-import { FiArrowRight, FiDownload } from "react-icons/fi" // Added FiDownload icon
+import {  FiDownload } from "react-icons/fi" // Added FiDownload icon
 
 const color_tops = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00"]
 
