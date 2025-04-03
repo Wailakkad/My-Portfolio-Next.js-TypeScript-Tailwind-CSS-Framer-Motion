@@ -35,7 +35,7 @@ export const Contact = () => {
                   href="tel:+9999999999"
                   className="text-2xl sm:text-lg md:text-2xl font-bold hover:text-gray-400 transition duration-300 flex items-center gap-2 text-gray-600"
                 >
-                  +99 (0) 99 999 999
+                  0652121777
                 </a>
               </div>
   
@@ -46,7 +46,7 @@ export const Contact = () => {
                   href="mailto:akkadouail@gmail.com"
                   className="text-2xl  md:text-2xl sm:text-lg  font-bold hover:text-gray-400 transition duration-300 flex items-center gap-2 text-gray-600"
                 >
-                  akkadouail@gmail.com
+                  akkadouail8@gmail.com
                 </a>
               </div>
   
