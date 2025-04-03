@@ -2,9 +2,10 @@
 import { useEffect } from "react"
 import { useMotionValue, animate, useMotionTemplate, motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import image from "@/public/profilepic.png"
 import obj from "@/public/3d-modeling.png"
-import { FiArrowRight } from "react-icons/fi" // Corrected import
+import { FiArrowRight, FiDownload } from "react-icons/fi" // Added FiDownload icon
 
 const color_tops = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00"]
 
@@ -60,7 +61,7 @@ export const Hero = () => {
           className="my-6"
         >
           <Image
-            src={image} // Ensure `image` is a valid import or path
+            src={image}
             width={250}
             height={250}
             alt="Profile Picture"
@@ -75,7 +76,7 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold"
         >
-          Ouil Akkad
+          Ouail Akkad
         </motion.h1>
 
         {/* Happy Clients Section */}
@@ -103,21 +104,23 @@ export const Hero = () => {
           Fullstack Developer based in Casablanca, with over 2 years of experience
         </motion.p>
 
-        {/* Download CV Button */}
-        <motion.button
-          className="flex w-fit items-center gap-2 rounded-full px-4 py-2 bg-purple-600 hover:bg-purple-700 transition-colors"
+        {/* Download CV Button - Updated to be functional */}
+        <motion.a
+          href="/Professional CV Resume.pdf" // Path to your CV file in the public folder
+          download="Professional CV Resume.pdf" // Name that will be used when downloading
+          className="flex w-fit items-center gap-2 rounded-full px-4 py-2 bg-purple-600 hover:bg-purple-700 transition-colors cursor-pointer"
           style={{ border, boxShadow }}
           whileHover={{ scale: 1.015 }}
           whileTap={{ scale: 0.95 }}
-          aria-label="Continue"
+          aria-label="Download CV"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true, amount: 0.5 }}
         >
           Download CV
-          <FiArrowRight/>
-        </motion.button>
+          <FiDownload />
+        </motion.a>
       </div>
 
       {/* Background Circles */}

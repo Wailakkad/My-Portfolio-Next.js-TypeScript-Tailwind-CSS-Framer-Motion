@@ -6,7 +6,7 @@ import { useMotionValue, animate, useMotionTemplate, motion } from "framer-motio
 import Image from "next/image"
 import laptop1 from "@/public/travel.jpg"
 import laptop2 from "@/public/laptop-mockup.jpg";
-import laptop3 from "@/public/07.jpg";
+import laptop3 from "@/public/laptop3.jpg";
 
 const projects = [
     {
@@ -28,10 +28,10 @@ const projects = [
     {
         id: 3,
         year: 2024,
-        title: "AI-Powered Chatbot",
-        description: 'A cutting-edge chatbot powered by artificial intelligence, designed to provide instant customer support and automate responses. It integrates seamlessly with websites and messaging platforms, offering personalized interactions and improving user experience. Suitable for businesses looking to enhance customer service efficiency.',
+        title: "digital products showcase",
+        description: 'An online platform to showcase and sell digital products. The website features a modern design, user-friendly navigation, and sections for product listings, descriptions, and purchase options. Ideal for creators looking to monetize their digital products.',
         Image: laptop3,
-        link: "https://travel-map-phi.vercel.app",
+        link: "https://my-digital-products-showcase.vercel.app",
     },
 ];
 const color_tops = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00"]
