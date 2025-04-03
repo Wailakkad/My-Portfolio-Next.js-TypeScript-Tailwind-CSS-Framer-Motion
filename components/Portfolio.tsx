@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { useMotionValue, animate, useMotionTemplate, motion } from "framer-motion"
 
 import Image from "next/image"
-import laptop1 from "@/public/laptop-screen-premium-mockup_165789-1031.avif"
+import laptop1 from "@/public/travel.jpg"
 import laptop2 from "@/public/laptop-mockup.jpg";
 import laptop3 from "@/public/07.jpg";
 
@@ -12,23 +12,26 @@ const projects = [
     {
         id: 1,
         year: 2024,
-        title: "AI Grammar Checker",
-        description: 'An advanced AI-powered grammar checker tool designed to help users improve their writing. It uses natural language processing (NLP) to detect grammatical errors, suggest corrections, and enhance overall writing quality. Perfect for students, professionals, and content creators.',
-        Image: laptop1
+        title: " TravelMap website",
+        description: 'the showcase website for TravelMap, a mobile app designed to make traveling easier, smarter, and more fun! 🎒✈️',
+        Image: laptop1,
+        link: "https://travel-map-phi.vercel.app",
     },
     {
         id: 2,
         year: 2024,
-        title: "Community Web Application",
-        description: 'A comprehensive web application built to foster community engagement. It includes features like forums, event management, and user profiles to connect people with shared interests. Ideal for local communities, organizations, and online groups looking to build a strong digital presence.',
-        Image: laptop2
+        title: "IT Services Agency",
+        description: 'A professional website for an IT services agency, showcasing their expertise and services. The site features a modern design, user-friendly navigation, and sections for services, portfolio, and contact information. Ideal for IT agencies looking to establish a strong online presence.',
+        Image: laptop2,
+        link: "https://it-services-agency-website-next-8dp6sukjp-wailakkads-projects.vercel.app",
     },
     {
         id: 3,
         year: 2024,
         title: "AI-Powered Chatbot",
         description: 'A cutting-edge chatbot powered by artificial intelligence, designed to provide instant customer support and automate responses. It integrates seamlessly with websites and messaging platforms, offering personalized interactions and improving user experience. Suitable for businesses looking to enhance customer service efficiency.',
-        Image: laptop3
+        Image: laptop3,
+        link: "https://travel-map-phi.vercel.app",
     },
 ];
 const color_tops = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00"]
@@ -97,7 +100,8 @@ export const Portfolio = () => {
                     />
                   )}
                   {selectedProject.id === project.id && (
-                    <motion.p
+                    <div>
+                      <motion.p
                       className="text-gray-400 mt-2"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -105,6 +109,13 @@ export const Portfolio = () => {
                     >
                       {project.description}
                     </motion.p>
+                    <button 
+  onClick={() => window.location.href =`${project.link}`}
+  className="bg-white p-2 text-black mt-2 px-4 rounded-md font-bold hover:bg-black hover:text-white transition-all duration-300"
+>
+  Visit
+</button>
+                    </div>
                   )}
                 </motion.div>
               ))}
