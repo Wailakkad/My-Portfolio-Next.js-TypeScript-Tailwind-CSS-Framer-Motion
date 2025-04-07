@@ -127,6 +127,20 @@ export const Hero = () => {
         <div className="bg-circle-background"></div>
         <div className="bg-circle-continer"></div>
       </div>
+
+      
+      <script 
+    type="module" 
+    dangerouslySetInnerHTML={{
+      __html: `
+        import Chatbot from "https://cdn.jsdelivr.net/npm/@denserai/embed-chat@1/dist/web.min.js";
+        Chatbot.init({
+          chatbotId: "2f59ac94-1ce1-4f48-8c4f-2783388c7246",
+        });
+      `
+    }}
+  />
+  
     </motion.section>
   );
 }
