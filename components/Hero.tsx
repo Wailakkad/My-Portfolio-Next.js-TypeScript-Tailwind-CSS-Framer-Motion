@@ -105,8 +105,8 @@ export const Hero = () => {
 
         {/* Download CV Button - Updated to be functional */}
         <motion.a
-          href="/Professional CV Resume.pdf" // Path to your CV file in the public folder
-          download="Professional CV Resume.pdf" // Name that will be used when downloading
+          href="/mon_cv.pdf" // Path to your CV file in the public folder
+          download="mon_cv.pdf" // Name that will be used when downloading
           className="flex w-fit items-center gap-2 rounded-full px-4 py-2 bg-purple-600 hover:bg-purple-700 transition-colors cursor-pointer"
           style={{ border, boxShadow }}
           whileHover={{ scale: 1.015 }}
@@ -129,17 +129,7 @@ export const Hero = () => {
       </div>
 
       
-      <script 
-    type="module" 
-    dangerouslySetInnerHTML={{
-      __html: `
-        import Chatbot from "https://cdn.jsdelivr.net/npm/@denserai/embed-chat@1/dist/web.min.js";
-        Chatbot.init({
-          chatbotId: "2f59ac94-1ce1-4f48-8c4f-2783388c7246",
-        });
-      `
-    }}
-  />
+    
   
     </motion.section>
   );
