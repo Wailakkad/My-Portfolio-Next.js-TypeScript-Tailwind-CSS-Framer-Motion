@@ -7,6 +7,8 @@ import Image from "next/image"
 import laptop1 from "@/public/travel.jpg"
 import laptop2 from "@/public/laptop-mockup.jpg";
 import laptop3 from "@/public/laptop3.jpg";
+import laptop4 from "@/public/D.jpg";
+import laptop5 from "@/public/De.jpg";
 
 const projects = [
     {
@@ -19,7 +21,7 @@ const projects = [
     },
     {
         id: 2,
-        year: 2024,
+        year: 2025,
         title: "IT Services Agency",
         description: 'A professional website for an IT services agency, showcasing their expertise and services. The site features a modern design, user-friendly navigation, and sections for services, portfolio, and contact information. Ideal for IT agencies looking to establish a strong online presence.',
         Image: laptop2,
@@ -27,12 +29,29 @@ const projects = [
     },
     {
         id: 3,
-        year: 2024,
+        year: 2025,
         title: "digital products showcase",
         description: 'An online platform to showcase and sell digital products. The website features a modern design, user-friendly navigation, and sections for product listings, descriptions, and purchase options. Ideal for creators looking to monetize their digital products.',
         Image: laptop3,
         link: "https://my-digital-products-showcase.vercel.app",
     },
+   {
+    id: 4,
+    year: 2025,
+    title: "Dental Clinic Website with AI Chatbot",
+    description: "A modern website for a dental clinic featuring an integrated AI chatbot for answering patient questions, scheduling appointments, and offering dental care guidance. Designed for user comfort and accessibility, this platform improves communication between patients and the clinic.",
+    Image: laptop4,
+    link: "https://website-dentist-front-end.vercel.app",
+},
+{
+    id: 5,
+    year: 2025,
+    title: "Home Decor Product Store",
+    description: "A clean and stylish eCommerce website designed to showcase and sell home decor items. The site includes elegant product listings, smooth navigation, and a modern interface to enhance the shopping experience. Perfect for interior design brands and decor enthusiasts.",
+    Image: laptop5,
+    link: "https://envy-furniture-brand-website.vercel.app",
+},
+
 ];
 const color_tops = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00"]
 
