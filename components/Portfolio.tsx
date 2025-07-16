@@ -1,6 +1,5 @@
 "use client"
-import React, { useState } from "react"
-import { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { useMotionValue, animate, useMotionTemplate, motion } from "framer-motion"
 import { ArrowUpRight, Eye, ExternalLink, Calendar, Sparkles } from "lucide-react"
 import Link from "next/link"
@@ -66,13 +65,34 @@ const projects = [
 
 const color_tops = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00"]
 
+// Pre-generate particles to avoid hydration mismatch
+const generateParticles = () => {
+  return Array.from({ length: 20 }, (_, i) => ({
+    id: i,
+    left: (i * 13.7) % 100, // Deterministic positioning
+    top: (i * 7.3) % 100,
+    delay: (i * 0.1) % 2,
+    duration: 3 + (i % 3),
+  }));
+};
+
 export const Portfolio = () => {
     const [selectedProject, setSelectedProject] = useState(projects[0]);
     const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+    const [isClient, setIsClient] = useState(false);
+    const [particles, setParticles] = useState<any[]>([]);
     const COLOR = useMotionValue(color_tops[0]);
   
-    // Animate the gradient color
+    // Handle client-side hydration
     useEffect(() => {
+      setIsClient(true);
+      setParticles(generateParticles());
+    }, []);
+
+    // Animate the gradient color only on client
+    useEffect(() => {
+      if (!isClient) return;
+      
       const controls = animate(COLOR, color_tops, {
         duration: 10,
         ease: "easeInOut",
@@ -81,38 +101,40 @@ export const Portfolio = () => {
       });
   
       return () => controls.stop();
-    }, [COLOR]);
+    }, [COLOR, isClient]);
   
     const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #000 50%, ${COLOR})`;
   
     return (
       <motion.section
-        style={{ backgroundImage }}
+        style={isClient ? { backgroundImage } : { background: '#000' }}
         id="portfolio"
         className="py-32 text-white bg-black min-h-screen flex items-center relative overflow-hidden"
       >
-        {/* Floating particles */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-white rounded-full opacity-20"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -20, 0],
-                opacity: [0.2, 0.5, 0.2],
-              }}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-            />
-          ))}
-        </div>
+        {/* Floating particles - only render on client */}
+        {isClient && (
+          <div className="absolute inset-0 overflow-hidden">
+            {particles.map((particle) => (
+              <motion.div
+                key={particle.id}
+                className="absolute w-1 h-1 bg-white rounded-full opacity-20"
+                style={{
+                  left: `${particle.left}%`,
+                  top: `${particle.top}%`,
+                }}
+                animate={{
+                  y: [0, -20, 0],
+                  opacity: [0.2, 0.5, 0.2],
+                }}
+                transition={{
+                  duration: particle.duration,
+                  repeat: Infinity,
+                  delay: particle.delay,
+                }}
+              />
+            ))}
+          </div>
+        )}
 
         <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 relative z-10">
           {/* Left Section - Project List */}
@@ -330,32 +352,36 @@ export const Portfolio = () => {
                 </motion.div>
               </div>
 
-              {/* Floating elements */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full opacity-60"
-                animate={{
-                  y: [0, -10, 0],
-                  rotate: [0, 180, 360],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-              <motion.div
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-400 rounded-full opacity-60"
-                animate={{
-                  y: [0, -15, 0],
-                  rotate: [0, -180, -360],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1,
-                }}
-              />
+              {/* Floating elements - only render on client */}
+              {isClient && (
+                <>
+                  <motion.div
+                    className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full opacity-60"
+                    animate={{
+                      y: [0, -10, 0],
+                      rotate: [0, 180, 360],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                  <motion.div
+                    className="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-400 rounded-full opacity-60"
+                    animate={{
+                      y: [0, -15, 0],
+                      rotate: [0, -180, -360],
+                    }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1,
+                    }}
+                  />
+                </>
+              )}
             </div>
           </motion.div>
         </div>

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
-import ProjectDetail from '@/components/ProjectDetail'; // Adjust path as needed
+import ProjectDetail from '@/components/ProjectDetail'; 
 import webdesign1 from "@/public/webdesign1.jpg"
 import webdesign2 from "@/public/webdesign2.jpg"
 import webdesign3 from "@/public/design2.jpg"
@@ -13,6 +13,9 @@ import webdesign6 from "@/public/design6.jpg"
 import website1 from "@/public/mock-1.jpg"
 import website2 from "@/public/phoneStore.png"
 import website3 from "@/public/dentist.png"
+import website4 from "@/public/website1.jpg"
+import website5 from "@/public/website2.jpg"
+import website6 from "@/public/website3.jpg"
 
 // Types
 interface Project {
@@ -36,6 +39,8 @@ interface Project {
   liveUrl?: string;
   githubUrl?: string;
 }
+
+
 
 type Category = "All" | "Branding" | "Web Design" | "Websites" ;
 
@@ -186,6 +191,30 @@ const projectsData: Project[] = [
     technologies: ["React", "D3.js", "Node.js", "PostgreSQL", "Chart.js"],
     additionalImages: [webdesign6, webdesign4, website3, webdesign3],
     liveUrl: "https://ecotech-dashboard.com"
+  },
+  {
+    id: 7,
+    title: "Minimalist Portfolio",
+    subtitle: "Creative Studio",
+    category: "Websites",
+    tags: ["Web Development", "UI/UX Design"],
+    image: website6,
+    description: "Clean portfolio website for creative agency",
+    detailedDescription: "A minimalist portfolio website designed for a creative studio, focusing on showcasing work through clean layouts, typography, and subtle animations.",
+    niche: "Creative Services & Design",
+    clientName: "Creative Studio Co.",
+    projectDuration: "5 weeks",
+    projectYear: "2024",
+    challenge: "Create a portfolio that lets the work speak for itself while maintaining visual interest.",
+    solution: "We designed a clean, grid-based layout with carefully chosen typography and subtle hover effects that enhance the viewing experience.",
+    results: [
+      "90% increase in project inquiries",
+      "45% improvement in time on site",
+      "60% increase in portfolio views"
+    ],
+    technologies: ["React", "Next.js", "GSAP", "Tailwind CSS"],
+    additionalImages: [website2, website3, webdesign1, webdesign2],
+    liveUrl: "https://creative-studio-portfolio.com"
   },
   // Continue with similar enhanced data for projects 7, 8, 9...
 ];
