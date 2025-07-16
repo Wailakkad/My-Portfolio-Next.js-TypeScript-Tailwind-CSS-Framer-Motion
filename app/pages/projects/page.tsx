@@ -38,6 +38,29 @@ interface Project {
   githubUrl?: string;
 }
 
+// Type for ProjectDetail component (expects string for image)
+interface ProjectDetailProps {
+  id: number;
+  title: string;
+  subtitle: string;
+  category: string;
+  tags: string[];
+  image: string;
+  description: string;
+  detailedDescription: string;
+  niche: string;
+  clientName: string;
+  projectDuration: string;
+  projectYear: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  technologies: string[];
+  additionalImages: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+}
+
 type Category = "All" | "Branding" | "Web Design" | "Websites" ;
 
 // Mock data for projects
@@ -215,6 +238,19 @@ const projectsData: Project[] = [
 
 const categories: Category[] = ["All", "Branding", "Web Design", "Websites"];
 
+// Helper function to convert StaticImageData to string
+const getImageSrc = (image: StaticImageData): string => {
+  if (typeof image === 'string') return image;
+  return image.src || '';
+};
+
+// Helper function to convert Project to ProjectDetailProps
+const convertProjectForDetail = (project: Project): ProjectDetailProps => ({
+  ...project,
+  image: getImageSrc(project.image),
+  additionalImages: project.additionalImages.map(img => getImageSrc(img))
+});
+
 // Component: Section Header
 const SectionHeader = () => (
   <div className="text-center mb-16">
@@ -344,7 +380,7 @@ const PortfolioProjects: React.FC = () => {
     <div className="min-h-screen bg-black text-white">
       {showDetail && selectedProject ? (
         <ProjectDetail 
-          project={selectedProject} 
+          project={convertProjectForDetail(selectedProject)} 
           onBack={handleBackToPortfolio}
         />
       ) : (
