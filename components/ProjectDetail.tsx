@@ -100,7 +100,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
             <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-96 md:h-[500px] object-cover"
+              width={1200}
+              height={700}
+              className="w-full  object-cover"
+              priority
             />
           </div>
         </div>
@@ -189,7 +192,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
                 <Image
                   src={image}
                   alt={`${project.title} mockup ${index + 1}`}
-                  className="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-300"
+                  width={600}
+                  height={700}
+                  className="w-full h-64 md:h-[700px] object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
             ))}

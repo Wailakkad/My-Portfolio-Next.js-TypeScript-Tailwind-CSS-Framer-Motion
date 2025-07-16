@@ -14,7 +14,16 @@ import website1 from "@/public/mock-1.jpg"
 import website2 from "@/public/phoneStore.png"
 import website3 from "@/public/dentist.png"
 import website6 from "@/public/website3.jpg"
-
+// dentist website Mockups 
+import laptop1 from "@/public/dentistLaptop1.jpg";
+import laptop2 from "@/public/dentistLaptop2.jpg";
+import phone1 from "@/public/desntistMobile1.jpg";
+import phone2 from "@/public/desntistMobile2.jpg";
+// jewerly website Mockups 
+import laptop3 from "@/public/jewelryLaptop.jpg";
+import phone3 from "@/public/jewelryPhone.jpg";
+import imageLayout1 from "@/public/jewelryPage1.jpg";
+import imageLayout2 from "@/public/jewelryPage2.jpg";
 // Types
 interface Project {
   id: number;
@@ -65,55 +74,64 @@ type Category = "All" | "Branding" | "Web Design" | "Websites" ;
 
 // Mock data for projects
 const projectsData: Project[] = [
+{
+  id: 1,
+  title: "SmileSync Dental Clinic",
+  subtitle: "Modern AI-Powered Dental Website",
+  category: "Websites",
+  tags: ["Healthcare", "AI Chatbot", "Full-Stack"],
+  image: website3, // Replace with the correct image import
+  description: "Modern and interactive website for a dental clinic powered by AI chatbot",
+  detailedDescription: "SmileSync is a full-stack web project developed for a modern dental clinic. It features an AI-powered chatbot built with DeepSeek via OpenRouter, designed to assist patients in scheduling appointments, answering common dental questions, and providing post-treatment care guidance. The frontend was built with React, Vite, Tailwind CSS, and Framer Motion for a smooth, animated user experience. The backend is handled by a Node.js and Express server that manages appointment data and chatbot integration.",
+  niche: "Dental & Healthcare Services",
+  clientName: "SmileSync Dental Center",
+  projectDuration: "2 months",
+  projectYear: "2025",
+  challenge: "The clinic needed a digital solution to improve patient communication, reduce receptionist workload, and modernize their online presence.",
+  solution: "We designed a clean and responsive website with an intuitive interface and seamless chatbot experience. The AI assistant helps users 24/7, while the design ensures trust and ease of use.",
+  results: [
+    "80% decrease in missed calls and appointment requests",
+    "3x increase in user engagement on the site",
+    "Positive feedback from 90% of patients using the AI assistant"
+  ],
+  technologies: [
+    "React (Vite)",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Node.js",
+    "Express",
+    "DeepSeek (OpenRouter)"
+  ],
+  additionalImages: [laptop1, laptop2, phone1, phone2], // Replace with relevant images
+  liveUrl: "https://website-dentist-front-end.vercel.app", // Replace if needed
+  githubUrl: "https://github.com/example/smilesync"
+}
+,
   {
-    id: 1,
-    title: "NovaTech Rebrand",
-    subtitle: "NovaTech Solutions",
-    category: "Websites",
-    tags: ["Branding & Identity"],
-    image: website3,
-    description: "Complete brand identity redesign for tech startup",
-    detailedDescription: "A comprehensive rebranding project that transformed NovaTech from a generic tech company into a cutting-edge AI solutions provider. The project involved creating a new visual identity, website design, and marketing materials that reflect the company's innovative approach to technology.",
-    niche: "Technology & AI Solutions",
-    clientName: "NovaTech Solutions Inc.",
-    projectDuration: "3 months",
-    projectYear: "2024",
-    challenge: "NovaTech needed to differentiate themselves in a crowded tech market and establish credibility as an AI solutions provider.",
-    solution: "We developed a modern, tech-forward brand identity with clean typography, a sophisticated color palette, and innovative visual elements that communicate precision and innovation.",
-    results: [
-      "40% increase in qualified leads",
-      "60% improvement in brand recognition",
-      "25% increase in conversion rates"
-    ],
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    additionalImages: [webdesign1, webdesign2, webdesign3, website1],
-    liveUrl: "https://novatech-demo.com",
-    githubUrl: "https://github.com/example/novatech"
-  },
-  {
-    id: 2,
-    title: "Lumiere Fashion Website",
-    subtitle: "Lumiere Boutique",
-    category: "Web Design",
-    tags: ["Website Design & Development", "Digital Marketing"],
-    image: webdesign1,
-    description: "E-commerce fashion website with modern design",
-    detailedDescription: "An elegant e-commerce platform designed for a luxury fashion boutique. The website features a sophisticated design system, intuitive navigation, and seamless shopping experience that reflects the brand's premium positioning.",
-    niche: "Fashion & Luxury Retail",
-    clientName: "Lumiere Boutique",
-    projectDuration: "4 months",
-    projectYear: "2024",
-    challenge: "Create an online presence that matches the boutique's luxury in-store experience while driving online sales.",
-    solution: "We designed a visually stunning e-commerce platform with high-quality imagery, smooth animations, and an intuitive checkout process.",
-    results: [
-      "200% increase in online sales",
-      "35% improvement in average order value",
-      "50% reduction in cart abandonment"
-    ],
-    technologies: ["React", "Next.js", "Stripe", "Contentful", "GSAP"],
-    additionalImages: [webdesign2, webdesign4, website2, webdesign5],
-    liveUrl: "https://lumiere-boutique.com"
-  },
+  id: 2,
+  title: "Aurelia Jewelry Design Concept",
+  subtitle: "Aurelia Jewelry",
+  category: "Web Design",
+  tags: ["UI/UX Design", "Figma", "Jewelry Branding"],
+  image: webdesign1, // Replace with your main mockup
+  description: "Luxury jewelry brand website UI/UX design concept",
+  detailedDescription: "Aurelia is a visual design concept for a luxury jewelry brand, created to showcase high-end products in a refined, elegant interface. The website mockup was designed in Figma, focusing on aesthetics, layout harmony, and user engagement tailored to premium clientele.",
+  niche: "Jewelry & Luxury Goods",
+  clientName: "Aurelia Jewelry (Demo Project)",
+  projectDuration: "2 weeks",
+  projectYear: "2025",
+  challenge: "Create a visual identity and user interface that reflects the elegance and craftsmanship of a high-end jewelry brand.",
+  solution: "Designed a sleek and modern landing page with soft typography, a luxurious color palette, and product showcase sections enhanced by lifestyle imagery and minimal layout.",
+  results: [
+    "Presented in client pitches as a sample jewelry design",
+    "Showcases high-end design skills for luxury markets",
+    "Used as a visual reference for future brand identity work"
+  ],
+  technologies: ["Figma", "Mockup Presentation Tools", "Adobe Photoshop (for visuals)"],
+  additionalImages: [laptop3, phone3, imageLayout1, imageLayout2], // Replace with real mockup images
+  liveUrl: "https://www.figma.com/design/27RapOo6gPFPEmsEvh4UYl/Untitled?node-id=0-1&t=FWgX8vSsK9NXcn6Y-1", // Use your actual Figma link or portfolio preview
+}
+,
   {
     id: 3,
     title: "Velocity App UI/UX",
@@ -289,7 +307,6 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ activeCategory, onCategoryC
   </div>
 );
 
-// Component: Project Card
 interface ProjectCardProps {
   project: Project;
   onProjectClick: (project: Project) => void;
@@ -300,11 +317,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onProjectClick }) =>
     className="group bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-neutral-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
     onClick={() => onProjectClick(project)}
   >
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden h-[700px]"> {/* Set a fixed height */}
       <Image
         src={project.image}
         alt={project.title}
-        className="w-full h-94 object-cover transition-transform duration-300 group-hover:scale-110"
+        className="object-cover transition-transform duration-300 group-hover:scale-110"
       />
       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300"></div>
       <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -335,7 +352,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onProjectClick }) =>
     </div>
   </div>
 );
-
 // Component: Projects Grid
 interface ProjectsGridProps {
   projects: Project[];
