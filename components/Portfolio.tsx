@@ -10,6 +10,15 @@ import laptop3 from "@/public/laptop3.jpg";
 import laptop4 from "@/public/D.jpg";
 import laptop5 from "@/public/De.jpg";
 
+// Define the Particle interface
+interface Particle {
+  id: number;
+  left: number;
+  top: number;
+  delay: number;
+  duration: number;
+}
+
 const projects = [
     {
         id: 1,
@@ -66,7 +75,7 @@ const projects = [
 const color_tops = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00"]
 
 // Pre-generate particles to avoid hydration mismatch
-const generateParticles = () => {
+const generateParticles = (): Particle[] => {
   return Array.from({ length: 20 }, (_, i) => ({
     id: i,
     left: (i * 13.7) % 100, // Deterministic positioning
@@ -80,7 +89,7 @@ export const Portfolio = () => {
     const [selectedProject, setSelectedProject] = useState(projects[0]);
     const [hoveredProject, setHoveredProject] = useState<number | null>(null);
     const [isClient, setIsClient] = useState(false);
-    const [particles, setParticles] = useState<any[]>([]);
+    const [particles, setParticles] = useState<Particle[]>([]);
     const COLOR = useMotionValue(color_tops[0]);
   
     // Handle client-side hydration
