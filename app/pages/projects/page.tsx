@@ -13,8 +13,7 @@ import webdesign6 from "@/public/design6.jpg"
 import website1 from "@/public/mock-1.jpg"
 import website2 from "@/public/phoneStore.png"
 import website3 from "@/public/dentist.png"
-import website4 from "@/public/website1.jpg"
-import website5 from "@/public/website2.jpg"
+
 import website6 from "@/public/website3.jpg"
 
 // Types
