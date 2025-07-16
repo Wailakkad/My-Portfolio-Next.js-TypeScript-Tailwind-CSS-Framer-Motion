@@ -12,7 +12,7 @@ interface Project {
   subtitle: string;
   category: string;
   tags: string[];
-  image: any;
+  image: string; // Changed from any to string
   description: string;
   detailedDescription: string;
   niche: string;
@@ -23,7 +23,7 @@ interface Project {
   solution: string;
   results: string[];
   technologies: string[];
-  additionalImages: any[];
+  additionalImages: string[]; // Changed from any[] to string[]
   liveUrl?: string;
   githubUrl?: string;
 }
@@ -184,7 +184,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white mb-6">Project Gallery</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {project.additionalImages.map((image: any, index: number) => (
+            {project.additionalImages.map((image: string, index: number) => (
               <div key={index} className="relative overflow-hidden rounded-xl border border-neutral-800">
                 <Image
                   src={image}
@@ -200,7 +200,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
         <div className="text-center bg-neutral-900 rounded-2xl p-12 border border-neutral-800">
           <h3 className="text-3xl font-bold text-white mb-4">Like What You See?</h3>
           <p className="text-neutral-400 mb-8 max-w-2xl mx-auto">
-            Ready to bring your vision to life? Let's discuss how we can create something amazing together.
+            Ready to bring your vision to life? Let&apos;s discuss how we can create something amazing together.
           </p>
           <button className="px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-neutral-200 transition-colors duration-300">
             Start Your Project
