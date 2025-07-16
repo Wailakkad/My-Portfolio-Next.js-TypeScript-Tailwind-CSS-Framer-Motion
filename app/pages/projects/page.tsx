@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import ProjectDetail from '@/components/ProjectDetail'; 
 import webdesign1 from "@/public/webdesign1.jpg"
@@ -13,7 +13,6 @@ import webdesign6 from "@/public/design6.jpg"
 import website1 from "@/public/mock-1.jpg"
 import website2 from "@/public/phoneStore.png"
 import website3 from "@/public/dentist.png"
-
 import website6 from "@/public/website3.jpg"
 
 // Types
@@ -23,7 +22,7 @@ interface Project {
   subtitle: string;
   category: string;
   tags: string[];
-  image: any;
+  image: StaticImageData;
   description: string;
   detailedDescription: string;
   niche: string;
@@ -34,12 +33,10 @@ interface Project {
   solution: string;
   results: string[];
   technologies: string[];
-  additionalImages: any[];
+  additionalImages: StaticImageData[];
   liveUrl?: string;
   githubUrl?: string;
 }
-
-
 
 type Category = "All" | "Branding" | "Web Design" | "Websites" ;
 
@@ -118,7 +115,6 @@ const projectsData: Project[] = [
     additionalImages: [webdesign3, webdesign6, website3, webdesign1],
     liveUrl: "https://velocity-app.com"
   },
-  // Add similar enhanced data for other projects...
   {
     id: 4,
     title: "Skyline Motion Campaign",
@@ -215,7 +211,6 @@ const projectsData: Project[] = [
     additionalImages: [website2, website3, webdesign1, webdesign2],
     liveUrl: "https://creative-studio-portfolio.com"
   },
-  // Continue with similar enhanced data for projects 7, 8, 9...
 ];
 
 const categories: Category[] = ["All", "Branding", "Web Design", "Websites"];
