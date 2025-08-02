@@ -26,6 +26,21 @@ import HomPage from "@/public/HomeJuice.jpg";
 import PrpductSection from "@/public/ProductJuice.jpg";
 import IsoltedProduct from "@/public/isolatedJuice.jpg";
 import SportsECTION from "@/public/SportJuice.jpg";
+// Import main parent image and additional images for the skincare project
+import ScinCareMain from "@/public/ScinCareWireFremeLap.jpg";
+import ScinCareGuideMo from "@/public/ScinCareGuideMo.jpg";
+import ScinCareGuideLap from "@/public/ScinCareGuideLap.jpg";
+import ScinCareLaptop from "@/public/ScinCareLaptop.jpg";
+import ScinCareMobile from "@/public/ScinCareMobile.jpg";
+import ScinCareWireFrameMob from "@/public/ScinCareWireFrameMob.jpg";
+
+// Import main parent image and additional images for the skincare project 
+
+import SecondScincareMain from "@/public/SecondScincareMain.jpg";
+import SecondScincareAbout from "@/public/SecondScincareAbout.jpg";
+import SecondScincareHero from "@/public/SecondScincareHero.jpg";
+import SecondScincareProduct from "@/public/SecondScincareProduct.jpg";
+
 // Types
 interface Project {
   id: number;
@@ -78,30 +93,64 @@ type Category = "All" | "Branding" | "Web Design" | "Websites" ;
 const projectsData: Project[] = 
 [
   {
-  id: 2,
-  title: "Aurelia Jewelry Design Concept",
-  subtitle: "Aurelia Jewelry",
+  id: 1,
+  title: "Eora Skincare Website UI",
+  subtitle: "Eora Rice Toner",
   category: "Web Design",
-  tags: ["UI/UX Design", "Figma", "Jewelry Branding"],
-  image: webdesign1, // Replace with your main mockup
-  description: "Luxury jewelry brand website UI/UX design concept",
-  detailedDescription: "Aurelia is a visual design concept for a luxury jewelry brand, created to showcase high-end products in a refined, elegant interface. The website mockup was designed in Figma, focusing on aesthetics, layout harmony, and user engagement tailored to premium clientele.",
-  niche: "Jewelry & Luxury Goods",
-  clientName: "Aurelia Jewelry (Demo Project)",
-  projectDuration: "2 weeks",
+  tags: ["UI/UX Design", "Figma", "Skincare Branding"],
+  image: ScinCareMain,  // variable pointing to main image import
+  description: "Clean and elegant skincare brand website UI/UX design concept",
+  detailedDescription: "Eora Skincare is a refined, minimalist web design concept for a premium skincare line focused on rice-based toners. This project highlights soothing colors, a luxurious layout, and modern typography to communicate trust, softness, and visible skin benefits. The design guides users toward purchasing while showcasing key product ingredients and benefits.",
+  niche: "Beauty & Skincare",
+  clientName: "Eora Skincare (Demo Project)",
+  projectDuration: "1 week",
   projectYear: "2025",
-  challenge: "Create a visual identity and user interface that reflects the elegance and craftsmanship of a high-end jewelry brand.",
-  solution: "Designed a sleek and modern landing page with soft typography, a luxurious color palette, and product showcase sections enhanced by lifestyle imagery and minimal layout.",
+  challenge: "Develop a website interface that evokes clarity, purity, and the nourishing qualities of Eora's rice toner products, driving conversions through a luxurious and modern design.",
+  solution: "Created a clean hero section with a high-quality product shot, clear call-to-action, and informative ingredients section. Emphasized a pastel palette and balanced whitespace for a premium feel. Integrated subtle animations for interactive engagement.",
   results: [
-    "Presented in client pitches as a sample jewelry design",
-    "Showcases high-end design skills for luxury markets",
-    "Used as a visual reference for future brand identity work"
+    "Crafted a design that exudes softness and luxury",
+    "Enhanced visual storytelling to highlight skincare benefits",
+    "Built a strong portfolio piece for beauty & skincare projects"
   ],
-  technologies: ["Figma", "Mockup Presentation Tools", "Adobe Photoshop (for visuals)"],
-  additionalImages: [laptop3, phone3, imageLayout1, imageLayout2], // Replace with real mockup images
-  liveUrl: "https://www.figma.com/design/27RapOo6gPFPEmsEvh4UYl/Untitled?node-id=0-1&t=FWgX8vSsK9NXcn6Y-1", // Use your actual Figma link or portfolio preview
-}
-,
+  technologies: ["Figma", "Adobe Photoshop", "Illustrator"],
+  additionalImages: [
+  ScinCareGuideMo,
+  ScinCareGuideLap,
+  ScinCareLaptop,
+  ScinCareMobile,
+  ScinCareWireFrameMob
+],
+  liveUrl: "https://www.figma.com/design/your-eora-skincare-design-link" // Replace with actual Figma or portfolio link
+},
+{
+  id: 2,
+  title: "MAVKA Lip Balm Website UI",
+  subtitle: "MAVKA Pink Grapefruit Lip Balm",
+  category: "Web Design",
+  tags: ["UI/UX Design", "Figma", "Natural Skincare"],
+  image: SecondScincareMain,  // variable pointing to main image import
+  description: "Nature-inspired lip balm website UI/UX design concept",
+  detailedDescription: "MAVKA Lip Balm project centers on a natural, eco-friendly brand identity with a soothing yet modern design. The website concept highlights plant-based ingredients, clean typography, and soft color palettes to connect emotionally with customers seeking natural beauty products. Crafted in Figma, it seamlessly integrates e-commerce with storytelling for a smooth shopping experience.",
+  niche: "Beauty & Skincare",
+  clientName: "MAVKA Skincare (Demo Project)",
+  projectDuration: "1.5 weeks",
+  projectYear: "2025",
+  challenge: "Design a website interface that blends the purity of natural ingredients with a modern shopping experience, while educating customers on product benefits and eco-friendly packaging.",
+  solution: "Developed an engaging homepage with product-focused hero section, clear benefits breakdown, and direct purchase options. Used organic shapes, soft illustrations, and playful typography to evoke the freshness of MAVKA’s lip balm.",
+  results: [
+    "Positioned the brand as premium yet natural",
+    "Created a storytelling-driven product page to boost conversions",
+    "Enhanced portfolio for eco-conscious beauty brands"
+  ],
+  technologies: ["Figma", "Adobe XD", "Photoshop"],
+  additionalImages:[
+  SecondScincareAbout,
+  SecondScincareHero,
+  SecondScincareProduct
+],
+  liveUrl: "https://www.figma.com/design/your-mavka-design-link" // Replace with your actual Figma or portfolio link
+},
+ 
   {
     id: 3,
     title: "Velocity App UI/UX",
@@ -247,7 +296,38 @@ const projectsData: Project[] =
     HomPage , PrpductSection , IsoltedProduct, SportsECTION
   ],
   liveUrl: "https://www.figma.com/design/your-zestrush-design-link"
+} , 
+ {
+  id: 9,
+  title: "Aurelia Jewelry Design Concept",
+  subtitle: "Aurelia Jewelry",
+  category: "Web Design",
+  tags: ["UI/UX Design", "Figma", "Jewelry Branding"],
+  image: webdesign1, // Replace with your main mockup
+  description: "Luxury jewelry brand website UI/UX design concept",
+  detailedDescription: "Aurelia is a visual design concept for a luxury jewelry brand, created to showcase high-end products in a refined, elegant interface. The website mockup was designed in Figma, focusing on aesthetics, layout harmony, and user engagement tailored to premium clientele.",
+  niche: "Jewelry & Luxury Goods",
+  clientName: "Aurelia Jewelry (Demo Project)",
+  projectDuration: "2 weeks",
+  projectYear: "2025",
+  challenge: "Create a visual identity and user interface that reflects the elegance and craftsmanship of a high-end jewelry brand.",
+  solution: "Designed a sleek and modern landing page with soft typography, a luxurious color palette, and product showcase sections enhanced by lifestyle imagery and minimal layout.",
+  results: [
+    "Presented in client pitches as a sample jewelry design",
+    "Showcases high-end design skills for luxury markets",
+    "Used as a visual reference for future brand identity work"
+  ],
+  technologies: ["Figma", "Mockup Presentation Tools", "Adobe Photoshop (for visuals)"],
+  additionalImages: [laptop3, phone3, imageLayout1, imageLayout2], // Replace with real mockup images
+  liveUrl: "https://www.figma.com/design/27RapOo6gPFPEmsEvh4UYl/Untitled?node-id=0-1&t=FWgX8vSsK9NXcn6Y-1", // Use your actual Figma link or portfolio preview
 }
+
+
+
+
+
+
+
 
 
 ];
