@@ -14,16 +14,18 @@ import website1 from "@/public/mock-1.jpg"
 import website2 from "@/public/phoneStore.png"
 import website3 from "@/public/dentist.png"
 import website6 from "@/public/website3.jpg"
-// dentist website Mockups 
-import laptop1 from "@/public/dentistLaptop1.jpg";
-import laptop2 from "@/public/dentistLaptop2.jpg";
-import phone1 from "@/public/desntistMobile1.jpg";
-import phone2 from "@/public/desntistMobile2.jpg";
+
 // jewerly website Mockups 
 import laptop3 from "@/public/jewelryLaptop.jpg";
 import phone3 from "@/public/jewelryPhone.jpg";
 import imageLayout1 from "@/public/jewelryPage1.jpg";
 import imageLayout2 from "@/public/jewelryPage2.jpg";
+// juice energy websiteDesign Mockups 
+import juiceFullPage from "@/public/juiceFullWEBSITE.jpg";
+import HomPage from "@/public/HomeJuice.jpg";
+import PrpductSection from "@/public/ProductJuice.jpg";
+import IsoltedProduct from "@/public/isolatedJuice.jpg";
+import SportsECTION from "@/public/SportJuice.jpg";
 // Types
 interface Project {
   id: number;
@@ -31,7 +33,7 @@ interface Project {
   subtitle: string;
   category: string;
   tags: string[];
-  image: StaticImageData;
+  image: StaticImageData; // Use StaticImageData for images
   description: string;
   detailedDescription: string;
   niche: string;
@@ -73,40 +75,8 @@ interface ProjectDetailProps {
 type Category = "All" | "Branding" | "Web Design" | "Websites" ;
 
 // Mock data for projects
-const projectsData: Project[] = [
-{
-  id: 1,
-  title: "SmileSync Dental Clinic",
-  subtitle: "Modern AI-Powered Dental Website",
-  category: "Websites",
-  tags: ["Healthcare", "AI Chatbot", "Full-Stack"],
-  image: website3, // Replace with the correct image import
-  description: "Modern and interactive website for a dental clinic powered by AI chatbot",
-  detailedDescription: "SmileSync is a full-stack web project developed for a modern dental clinic. It features an AI-powered chatbot built with DeepSeek via OpenRouter, designed to assist patients in scheduling appointments, answering common dental questions, and providing post-treatment care guidance. The frontend was built with React, Vite, Tailwind CSS, and Framer Motion for a smooth, animated user experience. The backend is handled by a Node.js and Express server that manages appointment data and chatbot integration.",
-  niche: "Dental & Healthcare Services",
-  clientName: "SmileSync Dental Center",
-  projectDuration: "2 months",
-  projectYear: "2025",
-  challenge: "The clinic needed a digital solution to improve patient communication, reduce receptionist workload, and modernize their online presence.",
-  solution: "We designed a clean and responsive website with an intuitive interface and seamless chatbot experience. The AI assistant helps users 24/7, while the design ensures trust and ease of use.",
-  results: [
-    "80% decrease in missed calls and appointment requests",
-    "3x increase in user engagement on the site",
-    "Positive feedback from 90% of patients using the AI assistant"
-  ],
-  technologies: [
-    "React (Vite)",
-    "Tailwind CSS",
-    "Framer Motion",
-    "Node.js",
-    "Express",
-    "DeepSeek (OpenRouter)"
-  ],
-  additionalImages: [laptop1, laptop2, phone1, phone2], // Replace with relevant images
-  liveUrl: "https://website-dentist-front-end.vercel.app", // Replace if needed
-  githubUrl: "https://github.com/example/smilesync"
-}
-,
+const projectsData: Project[] = 
+[
   {
   id: 2,
   title: "Aurelia Jewelry Design Concept",
@@ -252,9 +222,37 @@ const projectsData: Project[] = [
     additionalImages: [website2, website3, webdesign1, webdesign2],
     liveUrl: "https://creative-studio-portfolio.com"
   },
+   {
+  id: 8,
+  title: "ZestRush Energy Juice Website UI",
+  subtitle: "ZestRush Energy",
+  category: "Web Design",
+  tags: ["UI/UX Design", "Figma", "Juice Branding"],
+  image: juiceFullPage,
+  description: "Energetic juice brand website UI/UX design concept",
+  detailedDescription: "ZestRush is a vibrant and playful visual design concept for an energy juice brand, created to energize users through bold colors, engaging product showcases, and dynamic typography. The website mockup was designed in Figma with a focus on highlighting product benefits and enticing visuals that speak to an active, health-conscious audience.",
+  niche: "Food & Beverage",
+  clientName: "ZestRush Energy (Demo Project)",
+  projectDuration: "2 weeks",
+  projectYear: "2025",
+  challenge: "Craft a website interface that captures the freshness, boldness, and vitality of ZestRush juices, while driving online sales and brand awareness.",
+  solution: "Designed a bright, modern landing page with strong product hero sections, interactive carousels for popular flavors, and clear call-to-action buttons to boost conversions. Integrated social media and lifestyle imagery to connect with the target audience.",
+  results: [
+    "Enhanced perceived brand energy and freshness",
+    "Created a visually appealing and conversion-focused UI",
+    "Used as a standout portfolio piece for food & beverage brands"
+  ],
+  technologies: ["Figma", "Adobe Illustrator (for icons)", "Photoshop (for mockups)"],
+  additionalImages: [
+    HomPage , PrpductSection , IsoltedProduct, SportsECTION
+  ],
+  liveUrl: "https://www.figma.com/design/your-zestrush-design-link"
+}
+
+
 ];
 
-const categories: Category[] = ["All", "Branding", "Web Design", "Websites"];
+const categories: Category[] = ["All","Web Design", "Websites"];
 
 // Helper function to convert StaticImageData to string
 const getImageSrc = (image: StaticImageData): string => {
