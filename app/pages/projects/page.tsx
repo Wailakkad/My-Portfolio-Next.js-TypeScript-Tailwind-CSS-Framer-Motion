@@ -5,16 +5,8 @@ import Image, { StaticImageData } from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import ProjectDetail from '@/components/ProjectDetail'; 
 import webdesign1 from "@/public/webdesign1.jpg"
-import webdesign2 from "@/public/webdesign2.jpg"
-import webdesign3 from "@/public/design2.jpg"
-import webdesign4 from "@/public/design3.jpg"
-import webdesign5 from "@/public/design4.jpg"
-import webdesign6 from "@/public/design6.jpg"
 import website1 from "@/public/mock-1.jpg"
-import website2 from "@/public/phoneStore.png"
-import website3 from "@/public/dentist.png"
 import website6 from "@/public/website3.jpg"
-
 // jewerly website Mockups 
 import laptop3 from "@/public/jewelryLaptop.jpg";
 import phone3 from "@/public/jewelryPhone.jpg";
@@ -51,6 +43,22 @@ import MobileSkinCareMain from "@/public/MobileSkinCaremain.jpg";
 import MobileSkinCare1 from "@/public/MobileSkinCare1.jpg";
 import MobileSkinCare2 from "@/public/MobileSkinCare2.jpg";
 import MobileSkinCare3 from "@/public/MobileSkinCare3.jpg";
+
+// import mediaMotion project images
+import mediaMotion1 from "@/public/mediaMotionMock1.jpg";
+import mediaMotion2 from "@/public/mediaMochionMock2.jpg";
+import mediaMotion3 from "@/public/MediaMotionMock3.jpg";
+import mediaMotion4 from "@/public/MediaMotionMock4.jpg";
+import mediaMotion5 from "@/public/MediaMotionMock5.jpg";
+import mediaMotion6 from "@/public/MediaMotionMock6.jpg";
+import mediaMotion7 from "@/public/MediaMotionMock8.jpg";
+import mediaMotion8 from "@/public/MediaMotionMock9.jpg";
+import mediaMotion9 from "@/public/MediaMotionMock10.jpg";
+
+//phoneStore Mockups
+import phoneStoreMockup1 from "@/public/website1.jpg";
+import phoneStoreMockup2 from "@/public/website2.jpg";
+
 // Types
 interface Project {
   id: number;
@@ -162,54 +170,8 @@ const projectsData: Project[] =
   liveUrl: "https://www.figma.com/design/your-mavka-design-link" // Replace with your actual Figma or portfolio link
 },
  
-  {
-    id: 3,
-    title: "Velocity App UI/UX",
-    subtitle: "Velocity Productivity App",
-    category: "Web Design",
-    tags: ["UI/UX Design"],
-    image: webdesign2,
-    description: "Mobile app interface for productivity platform",
-    detailedDescription: "A comprehensive UI/UX design for a productivity mobile application that helps users manage tasks, track time, and collaborate with team members. The design focuses on simplicity and efficiency.",
-    niche: "Productivity & Task Management",
-    clientName: "Velocity Tech",
-    projectDuration: "2 months",
-    projectYear: "2024",
-    challenge: "Design an intuitive interface that doesn't overwhelm users while providing powerful productivity features.",
-    solution: "We created a clean, minimalist interface with smart information architecture and micro-interactions that guide users through their workflow.",
-    results: [
-      "4.8/5 App Store rating",
-      "30% increase in daily active users",
-      "45% improvement in task completion rates"
-    ],
-    technologies: ["Figma", "Principle", "React Native", "Firebase"],
-    additionalImages: [webdesign3, webdesign6, website3, webdesign1],
-    liveUrl: "https://velocity-app.com"
-  },
-  {
-    id: 4,
-    title: "Skyline Motion Campaign",
-    subtitle: "Skyline Electronics",
-    category: "Web Design",
-    tags: ["Motion Graphics & Video Production"],
-    image: webdesign3,
-    description: "Dynamic marketing campaign with motion graphics",
-    detailedDescription: "A dynamic digital marketing campaign featuring motion graphics, video content, and interactive web elements to showcase Skyline Electronics' innovative product line.",
-    niche: "Electronics & Technology",
-    clientName: "Skyline Electronics",
-    projectDuration: "6 weeks",
-    projectYear: "2024",
-    challenge: "Create engaging visual content that explains complex electronic products in an accessible way.",
-    solution: "We developed a series of motion graphics and interactive demos that break down product features through engaging animations.",
-    results: [
-      "150% increase in engagement rates",
-      "80% improvement in product understanding",
-      "35% boost in sales inquiries"
-    ],
-    technologies: ["After Effects", "Cinema 4D", "React", "Three.js"],
-    additionalImages: [webdesign4, webdesign5, website1, webdesign6],
-    liveUrl: "https://skyline-campaign.com"
-  },
+  
+ 
   {
     id: 5,
     title: "Minimalist Portfolio",
@@ -231,33 +193,20 @@ const projectsData: Project[] =
       "60% increase in portfolio views"
     ],
     technologies: ["React", "Next.js", "GSAP", "Tailwind CSS"],
-    additionalImages: [website2, website3, webdesign1, webdesign2],
+    additionalImages: [
+  mediaMotion1,
+  mediaMotion2,
+  mediaMotion3,
+  mediaMotion4,
+  mediaMotion5,
+  mediaMotion6,
+  mediaMotion7,
+  mediaMotion8,
+  mediaMotion9
+],
     liveUrl: "https://creative-studio-portfolio.com"
   },
-  {
-    id: 6,
-    title: "EcoTech Dashboard",
-    subtitle: "EcoTech Analytics",
-    category: "Web Design",
-    tags: ["Web Development", "Data Visualization"],
-    image: webdesign5,
-    description: "Analytics dashboard for environmental data",
-    detailedDescription: "A comprehensive analytics dashboard for environmental data visualization, helping organizations track and analyze their sustainability metrics in real-time.",
-    niche: "Environmental Technology",
-    clientName: "EcoTech Analytics",
-    projectDuration: "8 weeks",
-    projectYear: "2024",
-    challenge: "Present complex environmental data in an intuitive and actionable format.",
-    solution: "We created interactive charts, real-time data feeds, and customizable dashboard widgets that make environmental data accessible to all stakeholders.",
-    results: [
-      "70% reduction in data analysis time",
-      "95% user satisfaction rate",
-      "40% increase in sustainability initiative adoption"
-    ],
-    technologies: ["React", "D3.js", "Node.js", "PostgreSQL", "Chart.js"],
-    additionalImages: [webdesign6, webdesign4, website3, webdesign3],
-    liveUrl: "https://ecotech-dashboard.com"
-  },
+ 
   {
     id: 7,
     title: "Minimalist Portfolio",
@@ -279,7 +228,7 @@ const projectsData: Project[] =
       "60% increase in portfolio views"
     ],
     technologies: ["React", "Next.js", "GSAP", "Tailwind CSS"],
-    additionalImages: [website2, website3, webdesign1, webdesign2],
+    additionalImages: [phoneStoreMockup1, phoneStoreMockup2],
     liveUrl: "https://creative-studio-portfolio.com"
   },
    {

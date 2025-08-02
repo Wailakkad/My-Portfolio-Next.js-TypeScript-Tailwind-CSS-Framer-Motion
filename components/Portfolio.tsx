@@ -18,8 +18,21 @@ interface Particle {
 }
 
 const projects = [
+   {
+       
+    id: 1,
+    year: 2025,
+    title: "Webloom Agency Website",
+    description: "The official website for my web agency, Webloom, showcasing our services in website development, UI/UX design, and AI chatbot integration. Designed to attract potential clients with a sleek modern aesthetic, clear service descriptions, and an engaging portfolio section, this site demonstrates our capabilities in building smart, professional websites for businesses.",
+    Image: laptop2,
+    link: "https://webloom-agency.vercel.app",
+    category: "Business Website",
+    tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS", "Spline" , "openRouter"]
+
+
+    },
     {
-        id: 1,
+        id: 2,
         year: 2024,
         title: "TravelMap Website",
         description: 'The showcase website for TravelMap, a mobile app designed to make traveling easier, smarter, and more fun! 🎒✈️',
@@ -28,28 +41,16 @@ const projects = [
         category: "Mobile App Showcase",
         tech: ["React", "Next.js", "Tailwind CSS"]
     },
-    {
-       
-    id: 2,
-    year: 2025,
-    title: "Webloom Agency Website",
-    description: "The official website for my web agency, Webloom, showcasing our services in website development, UI/UX design, and AI chatbot integration. Designed to attract potential clients with a sleek modern aesthetic, clear service descriptions, and an engaging portfolio section, this site demonstrates our capabilities in building smart, professional websites for businesses.",
-    Image: laptop2,
-    link: "https://webloom-agency.vercel.app",
-    category: "Business Website",
-    tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS", "Spline"]
-
-
-    },
+   
     {
         id: 3,
-        year: 2025,
+        year: 2024,
         title: "Home Decor Product Store",
         description: "A clean and stylish eCommerce website designed to showcase and sell home decor items. The site includes elegant product listings, smooth navigation, and a modern interface.",
         Image: laptop5,
         link: "https://envy-furniture-brand-website.vercel.app",
         category: "E-commerce Design",
-        tech: ["React", "Stripe", "Contentful"]
+        tech: ["React", "Next.js", "Tailwind CSS", "Framer Motion"]
     },
 ];
 
@@ -249,19 +250,8 @@ export const Portfolio = () => {
                             <ExternalLink className="w-4 h-4" />
                             Visit Site
                           </motion.button>
+                        
                           
-                          <motion.button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              // Add preview functionality here
-                            }}
-                            className="flex items-center gap-2 border border-gray-600 text-gray-300 px-4 py-2 rounded-lg font-medium hover:bg-gray-800 hover:text-white transition-all duration-300"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            <Eye className="w-4 h-4" />
-                            Preview
-                          </motion.button>
                         </div>
                       </motion.div>
                     )}
