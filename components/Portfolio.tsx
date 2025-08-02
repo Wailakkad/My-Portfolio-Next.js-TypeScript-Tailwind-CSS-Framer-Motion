@@ -59,7 +59,7 @@ const color_tops = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00"]
 const generateParticles = (): Particle[] => {
   return Array.from({ length: 20 }, (_, i) => ({
     id: i,
-    left: (i * 13.7) % 100, // Deterministic positioning
+    left: (i * 13.7) % 100, // Deterministic positioning 
     top: (i * 7.3) % 100,
     delay: (i * 0.1) % 2,
     duration: 3 + (i % 3),

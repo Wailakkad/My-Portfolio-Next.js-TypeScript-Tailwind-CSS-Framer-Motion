@@ -35,13 +35,9 @@ import ScinCareMobile from "@/public/ScinCareMobile.jpg";
 import ScinCareWireFrameMob from "@/public/ScinCareWireFrameMob.jpg";
 
 // Import main parent image and additional images for the Secondskincare project 
-
 import SecondScincareMain from "@/public/SecondScincareMain.jpg";
-
 import SecondScincareAbout from "@/public/SecondScincareAbout.jpg";
-
 import SecondScincareHero from "@/public/SecondScincareHero.jpg";
-
 import SecondScincareProduct from "@/public/SecondScincareProduct.jpg";
 
 // Import main parent image and additional images for the FruitResturent project 
@@ -50,7 +46,11 @@ import FruitHeroPage from "@/public/FruitHeroPage.jpg";
 import FruitProduct from "@/public/FruitProduct.jpg";
 import FruitPopular from "@/public/FruitPopular.jpg";
 
-
+// Import main parent image and additional images for the MobileScinCare project
+import MobileSkinCareMain from "@/public/MobileSkinCaremain.jpg";
+import MobileSkinCare1 from "@/public/MobileSkinCare1.jpg";
+import MobileSkinCare2 from "@/public/MobileSkinCare2.jpg";
+import MobileSkinCare3 from "@/public/MobileSkinCare3.jpg";
 // Types
 interface Project {
   id: number;
@@ -95,9 +95,10 @@ interface ProjectDetailProps {
   additionalImages: string[];
   liveUrl?: string;
   githubUrl?: string;
+
 }
 
-type Category = "All" | "Branding" | "Web Design" | "Websites" ;
+type Category = "All" | "Mobile Design" | "Web Design" | "Websites" ;
 
 // Mock data for projects
 const projectsData: Project[] = 
@@ -358,7 +359,36 @@ const projectsData: Project[] =
   FruitPopular
 ],
   liveUrl: "https://www.figma.com/design/your-fruitbowl-design-link" // Replace with your actual Figma or portfolio link
+},
+{
+  "id": 12,
+  "title": "Mobile Skincare App UI",
+  "subtitle": "Natural Skincare Product Experience",
+  "category": "Mobile Design",
+  "tags": ["UI/UX Design", "Figma", "Skincare", "Mobile App"],
+  "image": MobileSkinCareMain,  // Replace with your imported main image variable
+  "description": "Minimal and nature-inspired mobile UI for skincare product browsing and purchase.",
+  "detailedDescription": "This mobile app UI presents a clean, modern experience for a skincare product brand. The layout emphasizes natural ingredients and simple usability, allowing users to browse, explore categories, and purchase products seamlessly. Designed with a neutral palette and nature-inspired elements.",
+  "niche": "Skincare & Wellness",
+  "clientName": "Sukin Skincare (Concept Project)",
+  "projectDuration": "1 week",
+  "projectYear": "2025",
+  "challenge": "Design an intuitive skincare shopping experience that promotes natural and eco-conscious values.",
+  "solution": "Crafted a soft, neutral UI with organic elements and modern components. Features include product categories, clear pricing, user reviews, and easy purchase actions.",
+  "results": [
+    "Presented skincare in a clean and trustworthy visual environment",
+    "Enhanced user experience with intuitive navigation",
+    "Created a reusable mobile template for natural beauty brands"
+  ],
+  "technologies": ["Figma", "Photoshop"],
+  "additionalImages": [
+    MobileSkinCare3,
+    MobileSkinCare2,
+    MobileSkinCare1
+  ],
+  "liveUrl": "https://www.figma.com/design/your-skincare-app-design-link"
 }
+
 
 
 
@@ -370,7 +400,7 @@ const projectsData: Project[] =
 
 ];
 
-const categories: Category[] = ["All","Web Design", "Websites"];
+const categories: Category[] = ["All", "Mobile Design", "Web Design", "Websites"];
 
 // Helper function to convert StaticImageData to string
 const getImageSrc = (image: StaticImageData): string => {
