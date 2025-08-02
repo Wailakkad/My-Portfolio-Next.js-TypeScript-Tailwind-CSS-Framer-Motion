@@ -34,12 +34,22 @@ import ScinCareLaptop from "@/public/ScinCareLaptop.jpg";
 import ScinCareMobile from "@/public/ScinCareMobile.jpg";
 import ScinCareWireFrameMob from "@/public/ScinCareWireFrameMob.jpg";
 
-// Import main parent image and additional images for the skincare project 
+// Import main parent image and additional images for the Secondskincare project 
 
 import SecondScincareMain from "@/public/SecondScincareMain.jpg";
+
 import SecondScincareAbout from "@/public/SecondScincareAbout.jpg";
+
 import SecondScincareHero from "@/public/SecondScincareHero.jpg";
+
 import SecondScincareProduct from "@/public/SecondScincareProduct.jpg";
+
+// Import main parent image and additional images for the FruitResturent project 
+import FruitMainPage from "@/public/FruitMainPage.jpg";
+import FruitHeroPage from "@/public/FruitHeroPage.jpg";
+import FruitProduct from "@/public/FruitProduct.jpg";
+import FruitPopular from "@/public/FruitPopular.jpg";
+
 
 // Types
 interface Project {
@@ -320,6 +330,34 @@ const projectsData: Project[] =
   technologies: ["Figma", "Mockup Presentation Tools", "Adobe Photoshop (for visuals)"],
   additionalImages: [laptop3, phone3, imageLayout1, imageLayout2], // Replace with real mockup images
   liveUrl: "https://www.figma.com/design/27RapOo6gPFPEmsEvh4UYl/Untitled?node-id=0-1&t=FWgX8vSsK9NXcn6Y-1", // Use your actual Figma link or portfolio preview
+},
+{
+  id: 10,
+  title: "Fruit Bowl Website UI",
+  subtitle: "Healthy & Colorful Bowls",
+  category: "Web Design",
+  tags: ["UI/UX Design", "Figma", "Food Branding"],
+  image: FruitMainPage,  // variable pointing to main image import
+  description: "Bright and fresh fruit bowl website UI/UX design concept",
+  detailedDescription: "This project presents a vibrant and appetizing website design concept for a fruit bowl brand, aimed at showcasing colorful, nutrient-rich bowls in an engaging and modern layout. Crafted in Figma, the design combines playful fruit imagery with clean typography, ensuring an easy and delightful user experience that highlights the health benefits of each bowl.",
+  niche: "Food & Beverage",
+  clientName: "Fruit Bowl Brand (Demo Project)",
+  projectDuration: "1 week",
+  projectYear: "2025",
+  challenge: "Create a website design that visually captures the freshness and vibrancy of fruit bowls, while delivering a clear and smooth user experience across desktop and mobile.",
+  solution: "Designed a responsive website with a captivating hero section, engaging product showcases, and bright visuals of fresh fruit bowls. Balanced whitespace and color to keep the focus on the products, and integrated easy calls-to-action to drive orders.",
+  results: [
+    "Showcased bright, colorful branding to attract health-conscious consumers",
+    "Created a mobile-friendly design for better accessibility",
+    "Enhanced portfolio for food-focused web design"
+  ],
+  technologies: ["Figma", "Adobe Photoshop"],
+  additionalImages: [
+  FruitHeroPage,
+  FruitProduct,
+  FruitPopular
+],
+  liveUrl: "https://www.figma.com/design/your-fruitbowl-design-link" // Replace with your actual Figma or portfolio link
 }
 
 

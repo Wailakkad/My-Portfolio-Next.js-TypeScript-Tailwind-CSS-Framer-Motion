@@ -5,9 +5,7 @@ import { ArrowUpRight, Eye, ExternalLink, Calendar, Sparkles } from "lucide-reac
 import Link from "next/link"
 import Image from "next/image"
 import laptop1 from "@/public/travel.jpg"
-import laptop2 from "@/public/laptop-mockup.jpg";
-import laptop3 from "@/public/laptop3.jpg";
-import laptop4 from "@/public/D.jpg";
+import laptop2 from "@/public/webloomWebsite.jpg";
 import laptop5 from "@/public/De.jpg";
 
 // Define the Particle interface
@@ -31,37 +29,20 @@ const projects = [
         tech: ["React", "Next.js", "Tailwind CSS"]
     },
     {
-        id: 2,
-        year: 2025,
-        title: "IT Services Agency",
-        description: 'A professional website for an IT services agency, showcasing their expertise and services. The site features a modern design, user-friendly navigation, and sections for services, portfolio, and contact information.',
-        Image: laptop2,
-        link: "https://it-services-agency-website-next-8dp6sukjp-wailakkads-projects.vercel.app",
-        category: "Business Website",
-        tech: ["Next.js", "TypeScript", "Framer Motion"]
+       
+    id: 2,
+    year: 2025,
+    title: "Webloom Agency Website",
+    description: "The official website for my web agency, Webloom, showcasing our services in website development, UI/UX design, and AI chatbot integration. Designed to attract potential clients with a sleek modern aesthetic, clear service descriptions, and an engaging portfolio section, this site demonstrates our capabilities in building smart, professional websites for businesses.",
+    Image: laptop2,
+    link: "https://webloom-agency.vercel.app",
+    category: "Business Website",
+    tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS", "Spline"]
+
+
     },
     {
         id: 3,
-        year: 2025,
-        title: "Digital Products Showcase",
-        description: 'An online platform to showcase and sell digital products. The website features a modern design, user-friendly navigation, and sections for product listings, descriptions, and purchase options.',
-        Image: laptop3,
-        link: "https://my-digital-products-showcase.vercel.app",
-        category: "E-commerce Platform",
-        tech: ["React", "Node.js", "MongoDB"]
-    },
-    {
-        id: 4,
-        year: 2025,
-        title: "Dental Clinic Website with AI Chatbot",
-        description: "A modern website for a dental clinic featuring an integrated AI chatbot for answering patient questions, scheduling appointments, and offering dental care guidance.",
-        Image: laptop4,
-        link: "https://website-dentist-front-end.vercel.app",
-        category: "Healthcare & AI",
-        tech: ["React", "AI Integration", "Healthcare APIs"]
-    },
-    {
-        id: 5,
         year: 2025,
         title: "Home Decor Product Store",
         description: "A clean and stylish eCommerce website designed to showcase and sell home decor items. The site includes elegant product listings, smooth navigation, and a modern interface.",
