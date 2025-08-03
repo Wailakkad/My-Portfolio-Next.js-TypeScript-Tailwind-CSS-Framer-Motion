@@ -9,49 +9,56 @@ const services = [
       description: "Full Stack MERN Development",
       details: "End-to-end web application development using MongoDB, Express, React, and Node.js with TypeScript integration",
       technologies: ["React", "Node.js", "Express", "MongoDB"],
-      expertise: ["REST APIs", "State Management", "Component Architecture", "MVC Pattern"]
+      
     },
     {
       id: 2,
       description: "Next.js Application Development",
       details: "Building modern, server-side rendered and statically generated web applications with Next.js framework",
       technologies: ["Next.js", "TypeScript", "TailwindCSS", "React"],
-      expertise: ["Server-Side Rendering", "Static Site Generation", "API Routes", "Page Routing"]
+      
     },
     {
       id: 3,
       description: "Database Implementation",
       details: "Designing and implementing database solutions using both MongoDB for NoSQL and MySQL for relational data",
       technologies: ["MongoDB", "MySQL", "Mongoose", "SQL"],
-      expertise: ["Schema Design", "CRUD Operations", "Data Modeling", "Query Writing"]
+      
     },
     {
       id: 4,
       description: "Frontend Development",
       details: "Creating responsive, modern user interfaces with React, focusing on component reusability and state management",
       technologies: ["React", "TypeScript", "CSS3", "HTML5"],
-      expertise: ["Hooks", "Functional Components", "Responsive Design", "Context API"]
+      
     },
     {
       id: 5,
       description: "Backend Development",
       details: "Building robust server-side applications with Node.js, Express, and implementing RESTful APIs",
       technologies: ["Node.js", "Express", "REST API", "Middleware"],
-      expertise: ["Route Handling", "Authentication", "Error Handling", "Server Configuration"]
+      
     },
     {
-      id: 6,
+  "id": 6,
+  "description": "AI Integration with Multi-Model API Platforms",
+  "details": "Integrating multiple AI model APIs offered by platforms like OpenRouter, Groq-Cloud, and Google Gemini using API keys to build intelligent web applications",
+  "technologies": ["OpenRouter API", "Groq-Cloud API", "Google Gemini API"]
+},
+
+    {
+      id: 7,
       description: "Authentication & Security",
       details: "Implementing secure authentication flows and basic security measures using JWT and bcrypt",
       technologies: ["JWT", "bcrypt", "HTTP-Only Cookies", "Auth Middleware"],
-      expertise: ["Password Hashing", "Token Verification", "Protected Routes", "User Authentication"]
+      
     },
     {
-      id: 7,
+      id: 8,
       description: "Deployment & Version Control",
       details: "Deploying applications using Vercel for Next.js projects and maintaining code with version control",
       technologies: ["Vercel", "Git", "GitHub", "Environment Variables"],
-      expertise: ["Continuous Deployment", "Branch Management", "Environment Setup", "Project Configuration"]
+      
     }
   ];
 
@@ -71,9 +78,7 @@ const services = [
           >
             <h1 className="text-5xl lg:text-6xl text-purple-600 font-extrabold sticky top-20">
               Skills
-              <span className="block mt-2 text-lg font-normal text-gray-400">
-                MERN & Next.js Developer
-              </span>
+              
             </h1>
           </motion.div>
   
@@ -139,21 +144,7 @@ const services = [
                             ))}
                           </div>
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-400 mb-2">
-                            Key Expertise
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {service.expertise.map((skill, index) => (
-                              <span
-                                key={index}
-                                className="px-3 py-1 bg-purple-600/20 text-purple-400 font-bold rounded-full text-sm"
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
+                        
                       </div>
                     </motion.div>
                   )}

@@ -4,10 +4,10 @@ import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const NavLinks = [
-  { name: "Home", link: "/" },
+  { name: "Home", link: "/"  },
   { name: "Portfolio", link: "#portfolio" },
   { name: "Contact", link: "#contact" },
-  { name: "Services", link: "#services" },
+  { name: "Skills", link: "#services" },
 ];
 
 export const Navbar = () => {

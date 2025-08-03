@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react"
 import { useMotionValue, animate, useMotionTemplate, motion } from "framer-motion"
-import { ArrowUpRight, Eye, ExternalLink, Calendar, Sparkles } from "lucide-react"
+import { ArrowUpRight, ExternalLink, Calendar, Sparkles } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import laptop1 from "@/public/travel.jpg"
@@ -206,7 +206,7 @@ export const Portfolio = () => {
                       {project.tech.map((tech, i) => (
                         <span
                           key={i}
-                          className="text-xs text-gray-500 bg-gray-900 px-2 py-1 rounded border border-gray-800"
+                          className="text-xs text-white bg-gray-900 px-2 py-1 rounded border border-white"
                         >
                           {tech}
                         </span>
@@ -270,7 +270,7 @@ export const Portfolio = () => {
             >
               <Link href="/pages/projects">
                 <motion.button
-                  className="group relative overflow-hidden bg-gradient-to-r from-gray-800 to-gray-900 text-white px-8 py-4 rounded-xl font-semibold border border-gray-700 hover:border-gray-500 transition-all duration-300"
+                  className="group relative overflow-hidden bg-white  text-black px-8 py-4 rounded-xl font-semibold border border-gray-700 hover:border-gray-500 transition-all duration-300"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

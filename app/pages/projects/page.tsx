@@ -58,7 +58,13 @@ import mediaMotion9 from "@/public/MediaMotionMock10.jpg";
 //phoneStore Mockups
 import phoneStoreMockup1 from "@/public/website1.jpg";
 import phoneStoreMockup2 from "@/public/website2.jpg";
-
+// demOSkniCare Mockups
+import demoMain from "@/public/demoSkinCareMain.jpg";
+import DemoMock1 from "@/public/demoSkinCareMock1.jpg";
+import DemoMock2 from "@/public/demoSkinCareMock2.jpg";
+import DemoMock3 from "@/public/demoSkinCareMock3.jpg";
+import DemoMock4 from "@/public/demoSkinCareMock4.jpg";
+import DemoMock5 from "@/public/demoSkinCareMock6.jpg";
 // Types
 interface Project {
   id: number;
@@ -169,11 +175,38 @@ const projectsData: Project[] =
 ],
   liveUrl: "https://www.figma.com/design/your-mavka-design-link" // Replace with your actual Figma or portfolio link
 },
- 
-  
- 
+ {
+  id: 3,
+  title: "Skincare E-commerce",
+  subtitle: "Clean Beauty Website",
+  category: "Websites",
+  tags: ["Web Design", "E-commerce", "UI/UX Design"],
+  image: demoMain,  // Replace with actual variable or path
+  description: "Modern, minimal e-commerce website for a skincare brand",
+  detailedDescription: "A calming, minimalist e-commerce platform designed for a skincare brand. It highlights natural beauty through clean design, soft colors, and intuitive navigation. Optimized for user experience and conversion.",
+  niche: "Beauty & Skincare",
+  clientName: "Natural Glow Skincare",
+  projectDuration: "4 weeks",
+  projectYear: "2025",
+  challenge: "Create an elegant and trust-building online store that reflects natural ingredients and promotes product discovery.",
+  solution: "We developed a sleek, mobile-responsive design with clean product pages, engaging visuals, and seamless checkout, all optimized for SEO and user engagement.",
+  results: [
+    "75% increase in online sales within 1 month",
+    "50% decrease in bounce rate",
+    "120% growth in returning customers"
+  ],
+  technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS"],
+  additionalImages: [
+    DemoMock1,
+    DemoMock2,
+    DemoMock3,
+    DemoMock4,
+    DemoMock5
+  ],
+  liveUrl: "https://naturalglow-skincare.com"  // Replace with real URL if needed
+},
   {
-    id: 5,
+    id: 4,
     title: "Minimalist Portfolio",
     subtitle: "Creative Studio",
     category: "Websites",
@@ -208,7 +241,7 @@ const projectsData: Project[] =
   },
  
   {
-    id: 7,
+    id: 5,
     title: "Minimalist Portfolio",
     subtitle: "Creative Studio",
     category: "Websites",
@@ -232,7 +265,7 @@ const projectsData: Project[] =
     liveUrl: "https://creative-studio-portfolio.com"
   },
    {
-  id: 8,
+  id: 6,
   title: "ZestRush Energy Juice Website UI",
   subtitle: "ZestRush Energy",
   category: "Web Design",
@@ -258,7 +291,7 @@ const projectsData: Project[] =
   liveUrl: "https://www.figma.com/design/your-zestrush-design-link"
 } , 
  {
-  id: 9,
+  id: 7,
   title: "Aurelia Jewelry Design Concept",
   subtitle: "Aurelia Jewelry",
   category: "Web Design",
@@ -282,7 +315,7 @@ const projectsData: Project[] =
   liveUrl: "https://www.figma.com/design/27RapOo6gPFPEmsEvh4UYl/Untitled?node-id=0-1&t=FWgX8vSsK9NXcn6Y-1", // Use your actual Figma link or portfolio preview
 },
 {
-  id: 10,
+  id: 8,
   title: "Fruit Bowl Website UI",
   subtitle: "Healthy & Colorful Bowls",
   category: "Web Design",
@@ -310,7 +343,7 @@ const projectsData: Project[] =
   liveUrl: "https://www.figma.com/design/your-fruitbowl-design-link" // Replace with your actual Figma or portfolio link
 },
 {
-  "id": 12,
+  "id": 9,
   "title": "Mobile Skincare App UI",
   "subtitle": "Natural Skincare Product Experience",
   "category": "Mobile Design",
@@ -336,7 +369,10 @@ const projectsData: Project[] =
     MobileSkinCare1
   ],
   "liveUrl": "https://www.figma.com/design/your-skincare-app-design-link"
-}
+},
+
+
+
 
 
 

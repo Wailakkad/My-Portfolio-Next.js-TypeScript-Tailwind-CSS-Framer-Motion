@@ -33,7 +33,7 @@ export const Contact = () => {
                 <p className="text-base sm:text-lg text-gray-300">Phone</p>
                 <a
                   href="tel:+9999999999"
-                  className="text-2xl sm:text-lg md:text-2xl font-bold hover:text-gray-400 transition duration-300 flex items-center gap-2 text-gray-600"
+                  className="text-2xl sm:text-lg md:text-2xl font-bold hover:text-white transition duration-300 flex items-center gap-2 text-gray-600"
                 >
                   0652121777
                 </a>
@@ -44,7 +44,7 @@ export const Contact = () => {
                 <p className="text-base sm:text-lg text-gray-300">Email</p>
                 <a
                   href="mailto:akkadouail@gmail.com"
-                  className="text-2xl  md:text-2xl sm:text-lg  font-bold hover:text-gray-400 transition duration-300 flex items-center gap-2 text-gray-600"
+                  className="text-2xl  md:text-2xl sm:text-lg  font-bold hover:text-white transition duration-300 flex items-center gap-2 text-gray-600"
                 >
                   akkadouail8@gmail.com
                 </a>
@@ -53,7 +53,7 @@ export const Contact = () => {
               {/* Address */}
               <div className="space-y-2">
                 <p className="text-base sm:text-lg text-gray-300">Address</p>
-                <p className="text-2xl sm:text-lg md:text-2xl font-bold text-gray-600">
+                <p className="text-2xl sm:text-lg md:text-2xl font-bold hover:text-white transition duration-300  text-gray-600 cursor-pointer">
                   Sidi Bernoussi, Casablanca
                 </p>
               </div>
